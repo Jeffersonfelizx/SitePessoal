@@ -1,6 +1,15 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+@font-face {
+    font-family: Gotham;
+    src: url(/fonts/Gotham.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 a{
     color: #ffff;
@@ -14,7 +23,7 @@ a:hover{
 .logo{
 font-size: 24px;
 text-transform: uppercase;
-letter-spacing: 4px;
+letter-spacing: 3px;
 }
 
 nav{
@@ -23,7 +32,7 @@ nav{
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
-    height: 8vh;
+    height: 7vh;
 }
 
 main{background: url() no-repeat center center;
@@ -33,7 +42,8 @@ height: 92vh;}
 
 nav a{
     text-transform: uppercase;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gotham', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.8rem;
 }
 
 .nav-list{
@@ -52,28 +62,188 @@ nav a{
 }
 
 .mobile-menu div{
-    width: 32px;
+    width: 28px;
     height: 2px;
     background: #ffff;
     margin: 8px;
 }
 
 /* Fim da Navegação*/
+
+/* Cards Body-- Inicio*/
+
+/* Cadastre-se */
+
+#register{
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #048588;
+    padding: 2rem;
+    
+}
+
+#register .container{
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, .212);
+}
+#register .form-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fde3a7d7;
+    padding: 1rem;
+}
+
+#register .form-image{
+    width: 31rem;
+}
+
+#register .form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffff;
+    padding: 1.4rem;
+    border-radius: 12px;
+}
+
+#register .form h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+#register .form-header{
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#register .form-headers h1::after{
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    position: absolute;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #2ea39fda;
+}
+
+#register .input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+#register .input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+#register .input-box input{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+#register .input-box input:hover{
+    background-color: #eeeeee75;
+}
+
+#register .input-box input :focus-visible{
+    outline: 1px solid #18A19D;
+}
+
+#register .input-box label,
+.gender-title h6{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+
+}
+#register .input-box::placeholder{
+    color: #000000be;
+}
+
+
+#register .gender-group{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.20rem;
+    padding:0 0.40rem;
+}
+#register .gender-input{
+
+
+    align-items: center;
+}
+
+#register .gender-input input{
+    margin-right: 0.25rem;
+}
+
+#register .gender-input label{
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+#register .continue-button button{
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #18A19D;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#register .continue-button button:hover{
+    background-color: #048588;
+}
+
+#register .continue-button button a{
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #ffff;
+
+}
+
+
+
+
+
 /* Responsabilidade Mobile Navegação */
 @media (max-width: 999px) {
+    /* Responsabilidade Mobile Navegação */
     body{
         overflow: hidden;
     }
     .nav-list{
         position: absolute;
-        top: 8vh;
+        top: 7vh;
         right: 0;
         width: 50vw;
         height: 92vh;
         background: black;
         flex-direction:column ;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
         transform: translateX(100%);
         transition: trasnform 0.3s ease-in;
     }
@@ -104,6 +274,17 @@ nav a{
         }
         
     }
+
+    /* #Register*/
+    #register .container{
+        display: none;
+    }
+    #register .container{
+        width: 50vw;
+    }
+    #register .form{
+        width: 100vw;
+    }
     
 }
 
@@ -119,8 +300,3 @@ nav a{
 .mobile-menu.nav-list.active .line3{
     transform: rotate(-45deg) translate(-5px, -7px);
 }
-
-/* Cards Body-- Inicio*/
-
-
-/* Site em contrução Provisorio*/
